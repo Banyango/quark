@@ -45,9 +45,10 @@ const Button1 = () => {
 
 ````
 
-This example create a global quark store, and uses in Message to retrieve the counter value. The Message2 component is a child of Message, and uses the same store to retrieve the counter value. The Button1 component is a sibling of Message, and also uses the same store to retrieve the counter value. The Button1 component also updates the counter value in the store.
+This example create a global quark, and then uses the state in two different components.
+useQuarkState is a hook that allows you to subscribe to a specific part of the store state, and updates will only occur when that state updates.
 
-You can also create a context bound version of a store by doing the following.
+You can also create a context bound version of a quark by doing the following. This is useful if you want a component types to have multiple stores in your application.
 
 ````typescript
 
@@ -76,9 +77,7 @@ export const Tock = () => {
         </div>
     )
 }
-````    
-
-Now the store state is bound by the context.
+````
 
 For more information on how to use Quark, check out the documentation.
 
