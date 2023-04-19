@@ -31,15 +31,12 @@ const Message = () => {
     )
 }
 
-const Button1 = () => {
+const Button = () => {
     const {counter} = useQuarkState(store, ['counter']);
     const onClick = () => store.update({counter: counter! + 1});
 
     return (
-        <>
-            <Message2 />
-            <button onClick = {onClick} > Counter++ </button>
-        < />
+        <button onClick = {onClick} > Counter++ </button>      
     )
 }
 
@@ -48,7 +45,7 @@ const Button1 = () => {
 This example creates a global quark, and then uses the state in two different components.
 useQuarkState is a hook that allows you to subscribe to a specific part of the store state, and updates will only occur when that state updates.
 
-You can also create a context bound version of a quark by doing the following. This is useful if you want a component types to have multiple stores in your application.
+You can also create a context bound version of a quark by doing the following. This is useful if you want a component type to have multiple stores in your application.
 
 ````typescript
 
@@ -73,7 +70,7 @@ export const Tock = () => {
     
     return (
         <div>
-            <h1>{tocks}</h1>
+            {tocks}
         </div>
     )
 }
