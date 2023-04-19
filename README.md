@@ -45,7 +45,7 @@ const Button1 = () => {
 
 ````
 
-This example create a global quark, and then uses the state in two different components.
+This example creates a global quark, and then uses the state in two different components.
 useQuarkState is a hook that allows you to subscribe to a specific part of the store state, and updates will only occur when that state updates.
 
 You can also create a context bound version of a quark by doing the following. This is useful if you want a component types to have multiple stores in your application.
